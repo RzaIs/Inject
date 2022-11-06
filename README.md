@@ -1,3 +1,3 @@
 # Inject
 
-A description of this package.
+A minimalist dependency injection library for iOS / macOS / iPadOS / watchOS
