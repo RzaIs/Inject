@@ -2,10 +2,15 @@ import XCTest
 @testable import Inject
 
 final class InjectTests: XCTestCase {
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(Inject().text, "Hello, World!")
+    
+    class InjectTest: Inject<EmptyDependency> {
+        var data: String {
+            "Hello World"
+        }
+    }
+    
+    func testExample() {
+        let injectTest = InjectTest()
+        XCTAssertEqual(injectTest.data, "Hello World")
     }
 }
